@@ -29,14 +29,34 @@ class BinarySearchTree:
         else:
             return self.__searchNode(currentNode.right, data)
     
-    def printTree(self):
-        self.__printTree(self.root)
+    def printInOrden(self):
+        self.__printInOrden(self.root)
       
-    def __printTree(self, currentNode):
+    def __printInOrden(self, currentNode):
         if currentNode is None:
             return
         self.__printTree(currentNode.left)
         print(currentNode.data)
         self.__printTree(currentNode.right)
+
+    def printPreOrden(self):
+        self.__printPreOrden(self.root)
+      
+    def __printPreOrden(self, currentNode):
+        if currentNode is None:
+            return
+        print(currentNode.data)
+        self.__printTree(currentNode.left)
+        self.__printTree(currentNode.right)
+    
+    def printPostOrden(self):
+        self.__printPostOrden(self.root)
+      
+    def __printPostOrden(self, currentNode):
+        if currentNode is None:
+            return
+        self.__printTree(currentNode.left)
+        self.__printTree(currentNode.right)
+        print(currentNode.data)
 
     

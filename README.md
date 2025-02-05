@@ -1,5 +1,11 @@
-# Trabajos de IA 09-10
+# Trabajos de Inteligencia Artificial
 
-## Integrantes:
-- Beltran Medina Carlos Daniel
-- Beltran Ontiveros Karen Valeria
+## Integrantes del Equipo
+
+- **Beltrán Medina Carlos Daniel**  
+- **Beltrán Ontiveros Karen Valeria**
+
+## Docente
+
+**Zuriel Dathan Mora Felix**
+
