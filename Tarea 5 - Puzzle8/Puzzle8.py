@@ -64,16 +64,7 @@ def imprimirTablero(tablero):
     print(borde_inf)
     print('')
 
-def main():
-    # Tiempo inicial
-    tiempoInicial = time.time()
-    print("┌──────────┐")
-    print("│ Puzzle 8 │")
-    print("└──────────┘")
-    print('')
-    print("Tablero Inicial")
-    imprimirTablero(tableroInicial)
-
+def algoritmo_a_estrella():
     movimientos = ['Arriba', 'Abajo', 'Izquierda', 'Derecha']
     visitados = set()
     colaPrioridad = []
@@ -87,11 +78,9 @@ def main():
             siguienteTablero = moverPieza(actual.tablero,movimiento)
             if siguienteTablero is not None and str(siguienteTablero) not in visitados:
                 heapq.heappush(colaPrioridad, Nodo(siguienteTablero,actual.peso+1,getHeuristica(siguienteTablero),movimiento,actual))
-    
-    if actual.tablero != tableroFinal:
-        print("No se encontro solucion")
-        print("Tiempo de ejecucion: ",time.time()-tiempoInicial, "segundos")
-        return
+    return actual
+
+def imprimirCamino(actual):
     camino = []
     while actual is not None:
         camino.append(actual)
@@ -113,6 +102,26 @@ def main():
         imprimirTablero(nodo.tablero)
 
     print("Cantidad de Movimientos: ",len(camino)-1)
+
+def main():
+    # Tiempo inicial
+    tiempoInicial = time.time()
+    print("┌──────────┐")
+    print("│ Puzzle 8 │")
+    print("└──────────┘")
+    print('')
+    print("Tablero Inicial")
+    imprimirTablero(tableroInicial)
+
+    actual = algoritmo_a_estrella()
+    
+    
+    if actual.tablero != tableroFinal:
+        print("No se encontro solucion")
+        print("Tiempo de ejecucion: ",time.time()-tiempoInicial, "segundos")
+        return
+    
+    imprimirCamino(actual)
     print("Tiempo de ejecucion: ",time.time()-tiempoInicial, "segundos")
     
 
