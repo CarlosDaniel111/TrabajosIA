@@ -6,7 +6,7 @@ Este proyecto es un detector de spam que utiliza técnicas de procesamiento de t
 Antes de ejecutar el proyecto, asegúrate de tener instaladas las siguientes librerías de Python:
 
 ```bash
-pip install pandas numpy scikit-learn nltk ipykernel
+pip3 install pandas numpy scikit-learn nltk ipykernel
 ```
 
 Además, es necesario descargar las stopwords de NLTK:
@@ -15,5 +15,4 @@ Además, es necesario descargar las stopwords de NLTK:
 import nltk
 nltk.download('stopwords')
 ```
-
 
