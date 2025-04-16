@@ -3,9 +3,9 @@ import time
 from Nodo import Nodo
 
 tableroInicial = [
-    [1, 0, 3],
-    [4, 8, 7],
-    [2, 6, 5]
+    [5, 3, 2],
+    [1, 4, 0],
+    [8, 7, 6]
 ]
 tableroFinal = [
     [1, 2, 3],
